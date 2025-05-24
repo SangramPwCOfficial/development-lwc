@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : Sangram Keshari Upadhyaya
+  @group             : 
+  @last modified on  : 19-05-2025
+  @last modified by  : Sangram Keshari Upadhyaya
+  Modifications Log
+  Ver   Date         Author                      Modification
+  1.0   19-05-2025   Sangram Keshari Upadhyaya   Initial Version
+-->
+<template>
+    <lightning-card title="Query Selctor">
+        <div class="slds-var-m-around_medium">
+            <h1>Hey! I am the Heading H1</h1>
+            <template for:each={userNames} for:item="user">
+                <div class="slds-var-m-around_medium user" key={user}>
+                    {user}
+                </div>
+            </template>
+            <div class="child" lwc:dom="manual"></div>
+            <lightning-button variant="Brand" label="Click me" title="Fetch Details" onclick={fetchDetailHandler}></lightning-button>    
+        </div>
+    </lightning-card>
+</template>
